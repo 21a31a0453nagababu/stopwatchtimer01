@@ -49,14 +49,19 @@
   padding: 10px;
 }
 .start-btn {
-  color: #1db05f;
+  background-color: #1db05f;
   margin-right: 24px;
 }
 .stop-btn {
-  color: #ef0d36;
+  background-color: #ef0d36;
   margin-right: 24px;
 }
 .reset-btn {
-  color: #eaa800;
+  background-color: #eaa800;
   margin-right: 24px;
+}
+.timer {
+  display: flex;
+  flex-direction: row;
+  align-self: center;
 }

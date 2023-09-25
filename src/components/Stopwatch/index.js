@@ -14,7 +14,7 @@ class Stopwatch extends Component {
     const seconds = Math.floor(timeElapsedinseconds % 60)
 
     if (seconds < 10) {
-      return `0{seconds}`
+      return `0${seconds}`
     }
     return seconds
   }
@@ -23,7 +23,7 @@ class Stopwatch extends Component {
     const {timeElapsedinseconds} = this.state
     const minutes = Math.floor(timeElapsedinseconds / 60)
     if (minutes < 10) {
-      return `0{minutes}`
+      return `0${minutes}`
     }
     return minutes
   }
@@ -51,14 +51,14 @@ class Stopwatch extends Component {
 
   render() {
     const {isRunning} = this.state
-    const {time} = `${this.renderMinutes()}:${this.renderSeconds()}`
+    const {time} = `this.renderMinutes():this.renderSeconds()`
 
     return (
       <div className="app-container">
         <div className="stopwatch-container">
           <h1 className="heading">Stopwatch</h1>
           <div className="timer-container">
-            <div>
+            <div className="timer">
               <img
                 src="https://assets.ccbp.in/frontend/react-js/stopwatch-timer.png"
                 alt="stopwatch"
@@ -69,7 +69,7 @@ class Stopwatch extends Component {
             <div className="button-container">
               <button
                 type="button"
-                onClick={this.onStartTimer()}
+                onClick={this.onStartTimer}
                 disabled={isRunning}
                 className="start-btn button"
               >
@@ -77,14 +77,14 @@ class Stopwatch extends Component {
               </button>
               <button
                 type="button"
-                onClick={this.onStopTimer()}
+                onClick={this.onStopTimer}
                 className="stop-btn button"
               >
                 Stop
               </button>
               <button
                 type="button"
-                onClick={this.onResetTimer()}
+                onClick={this.onResetTimer}
                 className="reset-btn button"
               >
                 Reset
